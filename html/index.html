@@ -30,8 +30,8 @@
                 <a class="update" href="" data-ng-click="updateItem($index)">Update</a>
             </li>
             <li class="total">
-                <p>Items: <span data-ng-bind="data.units"></span></p>
-                <p>Total: $<span data-ng-bind="data.total"></span></p>
+                <p>Items: <span data-ng-bind="getTotalItems()"></span></p>
+                <p>Total: $<span data-ng-bind="getTotalPrice()"></span></p>
             </li>
         </ul>
     </div>
