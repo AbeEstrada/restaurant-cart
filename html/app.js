@@ -43,7 +43,7 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
                 quantity: quantity
             }
         }).success(function(data, status, headers, config) {
-            item.quantity = quantity;
+            $scope.data.cart.order.items[i].quantity = quantity;
             //$scope.data.cart = data;
         });
     };
