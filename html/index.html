@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="restaurant">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -19,8 +19,13 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        Cart
+    <div class="container" data-ng-controller="Cart">
+        {{ cart }}
     </div>
+
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <script src="libs/angular-1.2.25/angular.min.js"></script>
+    <script src="libs/angular-1.2.25/angular-route.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
