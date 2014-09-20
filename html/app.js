@@ -32,16 +32,18 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
         return total;
     };
 
-    $scope.updateItem = function(i) {
+    $scope.updateItem = function(i, e) {
         var item = $scope.data.cart.order.items[i];
+        var quantity = angular.element(e.target).siblings('input.quantity').val();
         $http({
             method: 'POST',
             url: 'http://demo9542161.mockable.io/v1/carts/c1659f57-b21e-49cc-ba8f-0dde54b3e161/update',
             params: {
                 item_uuid: item.uuid,
-                quantity: item.quantity
+                quantity: quantity
             }
         }).success(function(data, status, headers, config) {
+            item.quantity = quantity;
             //$scope.data.cart = data;
         });
     };

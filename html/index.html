@@ -23,11 +23,11 @@
         <ul>
             <li ng-model="data.cart" data-ng-repeat="item in data.cart.order.items">
                 <a class="name" data-ng-bind="item.name" href="" ></a>
-                <input type="number" class="quantity" min="0" data-ng-model="data.cart.order.items[$index].quantity" data-ng-value="{{item.quantity}}"></input>
+                <input type="number" class="quantity" min="1" data-ng-value="{{item.quantity}}"></input>
                 <span class="total price" data-ng-bind="item.unit_price * item.quantity"></span>
                 <span class="unit price" data-ng-bind="{{item.unit_price}}"></span>
                 <a class="remove" href="" data-ng-click="removeItem($index)">Remove</a>
-                <a class="update" href="" data-ng-click="updateItem($index)">Update</a>
+                <a class="update" href="" data-ng-click="updateItem($index, $event)">Update</a>
             </li>
             <li class="total">
                 <p>Items: <span data-ng-bind="getTotalItems()"></span></p>
