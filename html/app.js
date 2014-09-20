@@ -17,4 +17,16 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
             $scope.data.total += item.total_price;
         };
     });
+
+    $scope.updateItem = function(i) {
+        var item = $scope.data.cart.order.items[i];
+        $http({
+            method: 'POST',
+            url: 'http://demo9542161.mockable.io/v1/carts/c1659f57-b21e-49cc-ba8f-0dde54b3e161/update',
+            params: {
+                item_uuid: item.uuid,
+                quantity: item.quantity
+            }
+        });
+    };
 }]);
