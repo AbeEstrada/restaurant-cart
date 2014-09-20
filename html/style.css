@@ -38,7 +38,9 @@ html {
   background-color: #e8e8e8; }
 
 body {
-  background-image: url('https://postmates.com/static/img/bg.png'); }
+  background-image: url('https://postmates.com/static/img/bg.png');
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px; }
 
 header {
   width: 960px;
@@ -97,3 +99,46 @@ header nav ul li:last-of-type a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
+  .container ul {
+    padding: 10px; }
+    .container ul li {
+      border-bottom: 1px solid #ddd;
+      padding: 7px 0;
+      overflow: hidden; }
+      .container ul li:last-of-type {
+        border-bottom: 0; }
+      .container ul li.total {
+        text-align: right; }
+        .container ul li.total p {
+          margin: 5px 0 15px 0; }
+      .container ul li a.name {
+        float: left;
+        width: 550px;
+        color: #000;
+        text-decoration: none;
+        margin: 5px 0 0 0; }
+      .container ul li input.quantity {
+        width: 50px;
+        text-align: right;
+        font-size: 16px; }
+      .container ul li span.price {
+        float: right;
+        width: 80px;
+        margin: 5px 0 0 0;
+        text-align: right; }
+      .container ul li a.update {
+        float: right;
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 5px 50px 0 0; }
+        .container ul li a.update:hover {
+          text-decoration: underline; }
+      .container ul li a.remove {
+        float: right;
+        color: #ff0000;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 5px 0 0 0; }
+        .container ul li a.remove:hover {
+          text-decoration: underline; }

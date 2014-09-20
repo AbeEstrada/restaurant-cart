@@ -20,7 +20,20 @@
         </nav>
     </header>
     <div class="container" data-ng-controller="Cart">
-        {{ cart }}
+        <ul>
+            <li data-ng-repeat="item in data.cart.order.items">
+                <a class="name" data-ng-bind="item.name" href="" ></a>
+                <input type="number" class="quantity" data-ng-value="{{item.quantity}}"></input>
+                <span class="total price" data-ng-bind="{{item.total_price}}"></span>
+                <span class="unit price" data-ng-bind="{{item.unit_price}}"></span>
+                <a class="remove" href="">Remove</a>
+                <a class="update" href="">Update</a>
+            </li>
+            <li class="total">
+                <p>Items: <span data-ng-bind="data.units"></span></p>
+                <p>Total: $<span data-ng-bind="data.total"></span></p>
+            </li>
+        </ul>
     </div>
 
     <script src="libs/jquery-2.1.1.min.js"></script>

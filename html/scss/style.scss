@@ -5,6 +5,8 @@ html {
 }
 body {
     background-image: url('https://postmates.com/static/img/bg.png');
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-size: 16px;
 }
 
 header {
@@ -72,4 +74,60 @@ header nav ul li:last-of-type a {
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
             border-radius: 3px;
+
+    ul {
+        padding: 10px;
+        li {
+            border-bottom: 1px solid #ddd;
+            padding: 7px 0;
+            overflow: hidden;
+            &:last-of-type {
+                border-bottom: 0
+            }
+            &.total {
+                text-align: right;
+                p {
+                    margin: 5px 0 15px 0;
+                }
+            }
+            a.name {
+                float: left;
+                width: 550px;
+                color: #000;
+                text-decoration: none;
+                margin: 5px 0 0 0;
+            }
+            input.quantity {
+                width: 50px;
+                text-align: right;
+                font-size: 16px;
+            }
+            span.price {
+                float: right;
+                width: 80px;
+                margin: 5px 0 0 0;
+                text-align: right;
+            }
+            a.update {
+                float: right;
+                color: #333;
+                font-size: 14px;
+                text-decoration: none;
+                margin: 5px 50px 0 0;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            a.remove {
+                float: right;
+                color: #ff0000;
+                font-size: 14px;
+                text-decoration: none;
+                margin: 5px 0 0 0;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
