@@ -29,7 +29,7 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
                 total += (item.unit_price * item.quantity);
             };
         } catch(e) {}
-        return total;
+        return total.toFixed(2);
     };
 
     $scope.updateItem = function(i, e) {
