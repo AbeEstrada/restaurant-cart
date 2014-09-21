@@ -63,4 +63,11 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
             });
         }
     };
+
+    $scope.showOptions = function(e) {
+        var options = angular.element(e.target).siblings('div.options');
+        if (options.not(':empty')) {
+            options.slideToggle();
+        }
+    };
 }]);
