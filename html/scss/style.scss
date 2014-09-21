@@ -75,9 +75,9 @@ header nav ul li:last-of-type a {
        -moz-border-radius: 3px;
             border-radius: 3px;
 
-    ul {
+    ul.items {
         padding: 10px;
-        li {
+        & > li {
             border-bottom: 1px solid #ddd;
             padding: 7px 0;
             overflow: hidden;
@@ -126,6 +126,22 @@ header nav ul li:last-of-type a {
                 margin: 5px 0 0 0;
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+            div.options {
+                display: none;
+                margin: 0 0 0 10px;
+                & > ul {
+                    li {
+                        font-size: 14px;
+                        margin: 5px 0 10px 0;
+                        strong {
+                            font-weight: bold;
+                        }
+                        span {
+                            padding: 0 0 0 15px;
+                        }
+                    }
                 }
             }
         }

@@ -20,14 +20,20 @@
         </nav>
     </header>
     <div class="container" data-ng-controller="Cart">
-        <ul>
+        <ul class="items">
             <li ng-model="data.cart" data-ng-repeat="item in data.cart.order.items">
-                <a class="name" data-ng-bind="item.name" href="" ></a>
+                <a class="name" data-ng-bind="item.name" data-ng-click="showOptions($event)" href="" ></a>
                 <input type="number" class="quantity" min="1" data-ng-value="{{item.quantity}}">
                 <span class="total price" data-ng-bind="item.unit_price * item.quantity"></span>
                 <span class="unit price" data-ng-bind="{{item.unit_price}}"></span>
                 <a class="remove" href="" data-ng-click="removeItem($index)">Remove</a>
                 <a class="update" href="" data-ng-click="updateItem($index, $event)">Update</a>
+                <div class="options">
+                    <ul data-ng-repeat="option_group in item.option_groups">
+                        <li><strong data-ng-bind="option_group.name"></strong></li>
+                        <li data-ng-repeat="option in option_group.options"><span data-ng-bind="option.name"></span></li>
+                    </ul>
+                </div>
             </li>
             <li class="total">
                 <p>Items: <span data-ng-bind="getTotalItems()"></span></p>

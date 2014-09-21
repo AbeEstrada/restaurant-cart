@@ -99,46 +99,56 @@ header nav ul li:last-of-type a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
-  .container ul {
+  .container ul.items {
     padding: 10px; }
-    .container ul li {
+    .container ul.items > li {
       border-bottom: 1px solid #ddd;
       padding: 7px 0;
       overflow: hidden; }
-      .container ul li:last-of-type {
+      .container ul.items > li:last-of-type {
         border-bottom: 0; }
-      .container ul li.total {
+      .container ul.items > li.total {
         text-align: right; }
-        .container ul li.total p {
+        .container ul.items > li.total p {
           margin: 5px 0 15px 0; }
-      .container ul li a.name {
+      .container ul.items > li a.name {
         float: left;
         width: 550px;
         color: #000;
         text-decoration: none;
         margin: 5px 0 0 0; }
-      .container ul li input.quantity {
+      .container ul.items > li input.quantity {
         width: 50px;
         text-align: right;
         font-size: 16px; }
-      .container ul li span.price {
+      .container ul.items > li span.price {
         float: right;
         width: 80px;
         margin: 5px 0 0 0;
         text-align: right; }
-      .container ul li a.update {
+      .container ul.items > li a.update {
         float: right;
         color: #333;
         font-size: 14px;
         text-decoration: none;
         margin: 5px 50px 0 0; }
-        .container ul li a.update:hover {
+        .container ul.items > li a.update:hover {
           text-decoration: underline; }
-      .container ul li a.remove {
+      .container ul.items > li a.remove {
         float: right;
         color: #ff0000;
         font-size: 14px;
         text-decoration: none;
         margin: 5px 0 0 0; }
-        .container ul li a.remove:hover {
+        .container ul.items > li a.remove:hover {
           text-decoration: underline; }
+      .container ul.items > li div.options {
+        display: none;
+        margin: 0 0 0 10px; }
+        .container ul.items > li div.options > ul li {
+          font-size: 14px;
+          margin: 5px 0 10px 0; }
+          .container ul.items > li div.options > ul li strong {
+            font-weight: bold; }
+          .container ul.items > li div.options > ul li span {
+            padding: 0 0 0 15px; }
