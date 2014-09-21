@@ -15,7 +15,7 @@ app.controller('Cart', ['$scope', '$http', function($scope, $http) {
         try {
             for (var i = $scope.data.cart.order.items.length - 1; i >= 0; i--) {
                 var item = $scope.data.cart.order.items[i];
-                total += item.quantity;
+                total += parseInt(item.quantity);
             };
         } catch(e) {}
         return total;
