@@ -20,7 +20,7 @@
         </nav>
     </header>
     <div class="container" data-ng-controller="Cart">
-        <ul class="items">
+        <ul class="items ng-hide" data-ng-show="data.cart">
             <li ng-model="data.cart" data-ng-repeat="item in data.cart.order.items">
                 <a class="name" data-ng-bind="item.name" data-ng-click="showOptions($event)" href="" ></a>
                 <input type="number" class="quantity" min="1" data-ng-value="{{item.quantity}}">
